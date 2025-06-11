@@ -1,0 +1,1463 @@
+html
+
+    :root {
+        --turquoise: #40E0D0;
+        --pink: #FF69B4;
+        --red: #FF0000;
+        --black: #000000;
+        --white: #FFFFFF;
+        --light-gray: #f5f5f5;
+        --gray: #888888;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+        background-color: var(--white);
+    }
+
+    /* Header Styles */
+    .top-bar {
+        background-color: var(--turquoise);
+        color: var(--white);
+        padding: 8px 0;
+        font-size: 14px;
+    }
+
+    .top-bar-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .top-bar-contact a {
+        color: var(--white);
+        text-decoration: none;
+        margin-right: 15px;
+    }
+
+    .top-bar-social a {
+        color: var(--white);
+        margin-left: 10px;
+        text-decoration: none;
+    }
+
+    .main-header {
+        background-color: var(--white);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 15px 20px;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo-text {
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--pink);
+    }
+
+    .logo-heart {
+        color: var(--pink);
+        font-size: 28px;
+        margin-right: 5px;
+    }
+
+    .search-bar {
+        flex-grow: 1;
+        margin: 0 30px;
+        position: relative;
+    }
+
+    .search-bar input {
+        width: 100%;
+        padding: 10px 15px;
+        border: 2px solid var(--turquoise);
+        border-radius: 25px;
+        outline: none;
+    }
+
+    .search-bar button {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        background-color: var(--pink);
+        color: var(--white);
+        border: none;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header-actions {
+        display: flex;
+        align-items: center;
+    }
+
+    .header-actions a {
+        margin-left: 20px;
+        color: var(--black);
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-actions i {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .header-actions span {
+        font-size: 12px;
+    }
+
+    .cart-count {
+        background-color: var(--pink);
+        color: var(--white);
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 10px;
+        position: absolute;
+        top: -5px;
+        right: -5px;
+    }
+
+    /* Navigation */
+    .main-nav {
+        background-color: var(--turquoise);
+    }
+
+    .nav-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .nav-list {
+        display: flex;
+        list-style: none;
+    }
+
+    .nav-list li {
+        position: relative;
+    }
+
+    .nav-list a {
+        color: var(--white);
+        text-decoration: none;
+        padding: 15px 20px;
+        display: block;
+        font-weight: 500;
+        transition: background-color 0.3s;
+    }
+
+    .nav-list a:hover {
+        background-color: var(--pink);
+    }
+
+    /* Dropdown Menu */
+    .nav-list li {
+        position: relative;
+    }
+
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--white);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        min-width: 200px;
+        display: none;
+        z-index: 100;
+    }
+
+    .dropdown li a {
+        color: var(--black);
+        padding: 12px 20px;
+        border-bottom: 1px solid var(--light-gray);
+    }
+
+    .dropdown li a:hover {
+        background-color: var(--light-gray);
+        color: var(--pink);
+    }
+
+    .nav-list li:hover .dropdown {
+        display: block;
+    }
+
+    /* Valentine's Day Banner */
+    .valentine-banner {
+        background: linear-gradient(135deg, var(--pink) 0%, var(--red) 100%);
+        padding: 30px 0;
+        text-align: center;
+        color: var(--white);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hearts-decoration {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+    }
+
+    .heart {
+        position: absolute;
+        opacity: 0.2;
+        animation: float 15s infinite linear;
+    }
+
+    @keyframes float {
+        0% {
+            transform: translateY(0) rotate(0deg);
+            opacity: 0;
+        }
+        10% {
+            opacity: 0.2;
+        }
+        90% {
+            opacity: 0.2;
+        }
+        100% {
+            transform: translateY(-100vh) rotate(360deg);
+            opacity: 0;
+        }
+    }
+
+    .banner-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .banner-content h2 {
+        font-size: 32px;
+        margin-bottom: 15px;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+
+    .banner-content p {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 12px 25px;
+        background-color: var(--white);
+        color: var(--pink);
+        text-decoration: none;
+        border-radius: 25px;
+        font-weight: 600;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    /* Main Content */
+    .main-content {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+
+    /* Categories Section */
+    .categories-section {
+        margin-bottom: 50px;
+    }
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 30px;
+        position: relative;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+        color: var(--pink);
+        display: inline-block;
+        padding: 0 20px;
+        background-color: var(--white);
+        position: relative;
+        z-index: 1;
+    }
+
+    .section-title::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: var(--pink);
+        z-index: 0;
+    }
+
+    .heart-categories {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .category-heart {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+
+    .category-heart:hover {
+        transform: scale(1.05);
+    }
+
+    .heart-shape {
+        width: 100%;
+        height: 100%;
+        background-color: var(--pink);
+        position: relative;
+        transform: rotate(-45deg);
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .heart-shape::before,
+    .heart-shape::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: var(--pink);
+        border-radius: 50%;
+        position: absolute;
+    }
+
+    .heart-shape::before {
+        top: -50%;
+        left: 0;
+    }
+
+    .heart-shape::after {
+        top: 0;
+        left: 50%;
+    }
+
+    .category-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        color: var(--white);
+        text-align: center;
+        padding: 20px;
+    }
+
+    .category-content i {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+
+    .category-content h3 {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    /* Featured Products */
+    .products-section {
+        margin-bottom: 50px;
+    }
+
+    .product-tags {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+    }
+
+    .product-tag {
+        padding: 8px 20px;
+        margin: 0 10px 10px;
+        background-color: var(--light-gray);
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .product-tag.active {
+        background-color: var(--turquoise);
+        color: var(--white);
+    }
+
+    .product-tag:hover {
+        background-color: var(--pink);
+        color: var(--white);
+    }
+
+    .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 30px;
+    }
+
+    .product-card {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        position: relative;
+    }
+
+    .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .product-badge {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        padding: 5px 10px;
+        background-color: var(--pink);
+        color: var(--white);
+        border-radius: 5px;
+        font-size: 12px;
+        font-weight: 600;
+        z-index: 1;
+    }
+
+    .product-image {
+        height: 200px;
+        background-color: var(--light-gray);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .product-image img {
+        max-width: 100%;
+        max-height: 100%;
+        transition: transform 0.5s;
+    }
+
+    .product-card:hover .product-image img {
+        transform: scale(1.1);
+    }
+
+    .product-actions {
+        position: absolute;
+        bottom: -50px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+        background-color: rgba(255,255,255,0.9);
+        transition: bottom 0.3s;
+    }
+
+    .product-card:hover .product-actions {
+        bottom: 0;
+    }
+
+    .product-action-btn {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-color: var(--white);
+        border: 1px solid var(--turquoise);
+        color: var(--turquoise);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .product-action-btn:hover {
+        background-color: var(--turquoise);
+        color: var(--white);
+    }
+
+    .product-info {
+        padding: 15px;
+    }
+
+    .product-category {
+        font-size: 12px;
+        color: var(--gray);
+        margin-bottom: 5px;
+    }
+
+    .product-title {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: var(--black);
+        text-decoration: none;
+        display: block;
+    }
+
+    .product-title:hover {
+        color: var(--pink);
+    }
+
+    .product-price {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .current-price {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--pink);
+    }
+
+    .old-price {
+        font-size: 14px;
+        color: var(--gray);
+        text-decoration: line-through;
+    }
+
+    .add-to-cart {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-top: 15px;
+        background-color: var(--turquoise);
+        color: var(--white);
+        border: none;
+        border-radius: 5px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        text-align: center;
+    }
+
+    .add-to-cart:hover {
+        background-color: var(--pink);
+    }
+
+    /* Special Offers */
+    .offers-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        margin-bottom: 50px;
+    }
+
+    .offer-card {
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        height: 200px;
+    }
+
+    .offer-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        filter: brightness(0.7);
+        transition: transform 0.5s, filter 0.5s;
+    }
+
+    .offer-card:hover .offer-bg {
+        transform: scale(1.1);
+        filter: brightness(0.5);
+    }
+
+    .offer-content {
+        position: relative;
+        z-index: 1;
+        padding: 30px;
+        color: var(--white);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .offer-content h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+
+    .offer-content p {
+        margin-bottom: 15px;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+
+    /* Brands Section */
+    .brands-section {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .brands-grid {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-top: 30px;
+    }
+
+    .brand-card {
+        width: 150px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--white);
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        padding: 15px;
+        transition: transform 0.3s;
+    }
+
+    .brand-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .brand-logo {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    /* Newsletter */
+    .newsletter {
+        background-color: var(--turquoise);
+        padding: 50px 0;
+        text-align: center;
+        color: var(--white);
+    }
+
+    .newsletter-content {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .newsletter h3 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .newsletter p {
+        margin-bottom: 20px;
+    }
+
+    .newsletter-form {
+        display: flex;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .newsletter-form input {
+        flex-grow: 1;
+        padding: 12px 15px;
+        border: none;
+        border-radius: 25px 0 0 25px;
+        outline: none;
+    }
+
+    .newsletter-form button {
+        padding: 12px 25px;
+        background-color: var(--pink);
+        color: var(--white);
+        border: none;
+        border-radius: 0 25px 25px 0;
+        cursor: pointer;
+        font-weight: 600;
+        transition: background-color 0.3s;
+    }
+
+    .newsletter-form button:hover {
+        background-color: var(--red);
+    }
+
+    /* Footer */
+    .footer {
+        background-color: var(--black);
+        color: var(--white);
+        padding: 50px 0 0;
+    }
+
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+    }
+
+    .footer-column h4 {
+        font-size: 18px;
+        margin-bottom: 20px;
+        color: var(--turquoise);
+    }
+
+    .footer-links {
+        list-style: none;
+    }
+
+    .footer-links li {
+        margin-bottom: 10px;
+    }
+
+    .footer-links a {
+        color: var(--white);
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+        color: var(--pink);
+    }
+
+    .footer-contact p {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    .footer-contact i {
+        margin-right: 10px;
+        color: var(--turquoise);
+    }
+
+    .footer-social {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .footer-social a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: var(--turquoise);
+        color: var(--white);
+        border-radius: 50%;
+        transition: background-color 0.3s;
+    }
+
+    .footer-social a:hover {
+        background-color: var(--pink);
+    }
+
+    .footer-bottom {
+        background-color: rgba(0,0,0,0.2);
+        padding: 20px 0;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .footer-bottom p {
+        font-size: 14px;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 992px) {
+        .header-content {
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            margin-bottom: 15px;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .search-bar {
+            order: 3;
+            width: 100%;
+            margin: 15px 0 0;
+        }
+
+        .header-actions {
+            order: 2;
+        }
+
+        .offers-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .nav-list {
+            flex-direction: column;
+        }
+
+        .products-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .newsletter-form {
+            flex-direction: column;
+        }
+
+        .newsletter-form input {
+            border-radius: 25px;
+            margin-bottom: 10px;
+        }
+
+        .newsletter-form button {
+            border-radius: 25px;
+        }
+        
+        .dropdown {
+            position: static;
+            box-shadow: none;
+            display: none;
+            background-color: rgba(0,0,0,0.05);
+        }
+        
+        .nav-list li.has-dropdown.active .dropdown {
+            display: block;
+        }
+        
+        .dropdown li a {
+            padding-left: 40px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .products-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .heart-categories {
+            gap: 15px;
+        }
+
+        .category-heart {
+            width: 150px;
+            height: 150px;
+        }
+    }
+
+    /* Mobile Menu */
+    .mobile-menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: var(--black);
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    @media (max-width: 992px) {
+        .mobile-menu-toggle {
+            display: block;
+        }
+
+        .nav-content {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 80%;
+            height: 100vh;
+            background-color: var(--white);
+            z-index: 1000;
+            transition: left 0.3s;
+            box-shadow: 5px 0 15px rgba(0,0,0,0.1);
+        }
+
+        .nav-content.active {
+            left: 0;
+        }
+
+        .nav-list {
+            padding-top: 70px;
+        }
+
+        .nav-list a {
+            color: var(--black);
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .close-menu {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 999;
+        }
+
+        .menu-overlay.active {
+            display: block;
+        }
+        
+        .dropdown-toggle {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            color: var(--black);
+            font-size: 16px;
+        }
+    }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<!-- Header -->
+<header class="main-header">
+    <div class="header-content">
+        <button class="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="logo">
+            <span class="logo-heart"><i class="fas fa-heart"></i></span>
+            <span class="logo-text">Pitada de Amor</span>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="O que você procura hoje?">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="header-actions">
+            <a href="#">
+                <i class="far fa-user"></i>
+                <span>Conta</span>
+            </a>
+            <a href="#">
+                <i class="far fa-heart"></i>
+                <span>Favoritos</span>
+            </a>
+            <a href="#" style="position: relative;">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-count">3</span>
+                <span>Carrinho</span>
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- Navigation -->
+<nav class="main-nav">
+    <div class="nav-content">
+        <button class="close-menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="nav-list">
+            <li><a href="#">Início</a></li>
+            <li class="has-dropdown">
+                <a href="#">Acessórios</a>
+                <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
+                <ul class="dropdown">
+                    <li><a href="#">Aneis</a></li>
+                    <li><a href="#">Brincos</a></li>
+                    <li><a href="#">Colares</a></li>
+                    <li><a href="#">Conjunto</a></li>
+                    <li><a href="#">Kits</a></li>
+                </ul>
+            </li>
+            <li class="has-dropdown">
+                <a href="#">Calçados</a>
+                <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
+                <ul class="dropdown">
+                    <li><a href="#">Sandalias</a></li>
+                    <li><a href="#">Scarpin</a></li>
+                    <li><a href="#">Botas</a></li>
+                    <li><a href="#">Rasteiras</a></li>
+                </ul>
+            </li>
+            <li class="has-dropdown">
+                <a href="#">Cosméticos</a>
+                <span class="dropdown-toggle"><i class="fas fa-chevron-down"></i></span>
+                <ul class="dropdown">
+                    <li><a href="#">Avon</a></li>
+                    <li><a href="#">Natura</a></li>
+                    <li><a href="#">Boticário</a></li>
+                    <li><a href="#">Eudora</a></li>
+                    <li><a href="#">Quem disse berenice</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Mais Vendidos</a></li>
+            <li><a href="#">Tendências</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </div>
+    <div class="menu-overlay"></div>
+</nav>
+
+<!-- Valentine's Day Banner -->
+<section class="valentine-banner">
+    <div class="hearts-decoration">
+        <!-- Hearts decoration -->
+        <svg class="heart" style="left: 10%; animation-duration: 15s; width: 50px; height: 50px;" viewBox="0 0 24 24">
+            <path fill="white" d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" />
+        </svg>
+        <svg class="heart" style="left: 25%; animation-duration: 18s; animation-delay: 2s; width: 30px; height: 30px;" viewBox="0 0 24 24">
+            <path fill="white" d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" />
+        </svg>
+        <svg class="heart" style="left: 40%; animation-duration: 12s; animation-delay: 1s; width: 40px; height: 40px;" viewBox="0 0 24 24">
+            <path fill="white" d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" />
+        </svg>
+        <svg class="heart" style="left: 60%; animation-duration: 20s; animation-delay: 3s; width: 35px; height: 35px;" viewBox="0 0 24 24">
+            <path fill="white" d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" />
+        </svg>
+        <svg class="heart" style="left: 75%; animation-duration: 16s; animation-delay: 2s; width: 45px; height: 45px;" viewBox="0 0 24 24">
+            <path fill="white" d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" />
+        </svg>
+        <svg class="heart" style="left: 90%; animation-duration: 14s; width: 25px; height: 25px;" viewBox="0 0 24 24">
+            <path fill="white" d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" />
+        </svg>
+    </div>
+    <div class="banner-content">
+        <h2>Especial Dia dos Namorados</h2>
+        <p>Presentes perfeitos para surpreender quem você ama</p>
+        <a href="#" class="btn">Ver Ofertas</a>
+    </div>
+</section>
+
+<!-- Main Content -->
+<div class="main-content">
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <div class="section-title">
+            <h2>Categorias</h2>
+        </div>
+        <div class="heart-categories">
+            <div class="category-heart">
+                <div class="heart-shape"></div>
+                <div class="category-content">
+                    <i class="fas fa-gem"></i>
+                    <h3>Semijoias</h3>
+                </div>
+            </div>
+            <div class="category-heart">
+                <div class="heart-shape"></div>
+                <div class="category-content">
+                    <i class="fas fa-shoe-prints"></i>
+                    <h3>Sapatos</h3>
+                </div>
+            </div>
+            <div class="category-heart">
+                <div class="heart-shape"></div>
+                <div class="category-content">
+                    <i class="fas fa-spray-can"></i>
+                    <h3>Perfumes</h3>
+                </div>
+            </div>
+            <div class="category-heart">
+                <div class="heart-shape"></div>
+                <div class="category-content">
+                    <i class="fas fa-magic"></i>
+                    <h3>Maquiagem</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="products-section">
+        <div class="section-title">
+            <h2>Produtos em Destaque</h2>
+        </div>
+        <div class="product-tags">
+            <div class="product-tag active">Todos</div>
+            <div class="product-tag">Mais Vendidos</div>
+            <div class="product-tag">Favoritos</div>
+            <div class="product-tag">Novidades</div>
+            <div class="product-tag">Promoções</div>
+        </div>
+        <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <span class="product-badge">-20%</span>
+                <div class="product-image">
+                    <svg viewBox="0 0 24 24" width="100" height="100">
+                        <path fill="#FF69B4" d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" />
+                    </svg>
+                    <div class="product-actions">
+                        <button class="product-action-btn">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="product-action-btn">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="product-action-btn">
+                            <i class="fas fa-sync-alt"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Semijoias</span>
+                    <a href="#" class="product-title">Colar Coração Cristal</a>
+                    <div class="product-price">
+                        <span class="current-price">R$ 79,90</span>
+                        <span class="old-price">R$ 99,90</span>
+                    </div>
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <svg viewBox="0 0 24 24" width="100" height="100">
+                        <path fill="#40E0D0" d="M12,2.5L8.42,8.06L2,9.74L6.2,14.88L5.82,21.5L12,19.09L18.18,21.5L17.8,14.88L22,9.74L15.58,8.06L12,2.5Z" />
+                    </svg>
+                    <div class="product-actions">
+                        <button class="product-action-btn">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="product-action-btn">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="product-action-btn">
+                            <i class="fas fa-sync-alt"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Natura</span>
+                    <a href="#" class="product-title">Perfume Essencial Feminino</a>
+                    <div class="product-price">
+                        <span class="current-price">R$ 149,90</span>
+                    </div>
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <span class="product-badge">Novo</span>
+                <div class="product-image">
+                    <svg viewBox="0 0 24 24" width="100" height="100">
+                        <path fill="#FF0000" d="M7,14A2,2 0 0,1 5,12A2,2 0 0,1 7,10A2,2 0 0,1 9,12A2,2 0 0,1 7,14M12.65,10C11.83,7.67 9.61,6 7,6A6,6 0 0,0 1,12A6,6 0 0,0 7,18C9.61,18 11.83,16.33 12.65,14H17V18H21V14H23V10H12.65Z" />
+                    </svg>
+                    <div class="product-actions">
+                        <button class="product-action-btn">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="product-action-btn">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="product-action-btn">
+                            <i class="fas fa-sync-alt"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Sapatos</span>
+                    <a href="#" class="product-title">Sandália Elegance</a>
+                    <div class="product-price">
+                        <span class="current-price">R$ 129,90</span>
+                    </div>
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <svg viewBox="0 0 24 24" width="100" height="100">
+                        <path fill="#FF69B4" d="M9,22A1,1 0 0,1 8,21V18H4A2,2 0 0,1 2,16V4C2,2.89 2.9,2 4,2H20A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H13.9L10.2,21.71C10,21.9 9.75,22 9.5,22V22H9Z" />
+                    </svg>
+                    <div class="product-actions">
+                        <button class="product-action-btn">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="product-action-btn">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="product-action-btn">
+                            <i class="fas fa-sync-alt"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">O Boticário</span>
+                    <a href="#" class="product-title">Kit Presente Cuide-se Bem</a>
+                    <div class="product-price">
+                        <span class="current-price">R$ 89,90</span>
+                        <span class="old-price">R$ 109,90</span>
+                    </div>
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers -->
+    <section class="offers-section">
+        <div class="section-title">
+            <h2>Ofertas Especiais</h2>
+        </div>
+        <div class="offers-grid">
+            <div class="offer-card">
+                <div class="offer-bg" style="background-color: var(--pink);"></div>
+                <div class="offer-content">
+                    <h3>Semijoias com até 30% OFF</h3>
+                    <p>Brincos, colares e pulseiras para todos os estilos</p>
+                    <a href="#" class="btn">Comprar Agora</a>
+                </div>
+            </div>
+            <div class="offer-card">
+                <div class="offer-bg" style="background-color: var(--turquoise);"></div>
+                <div class="offer-content">
+                    <h3>Perfumes Importados</h3>
+                    <p>As melhores fragrâncias para presentear</p>
+                    <a href="#" class="btn">Comprar Agora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="brands-section">
+        <div class="section-title">
+            <h2>Nossas Marcas</h2>
+        </div>
+        <div class="brands-grid">
+            <div class="brand-card">
+                <div class="brand-logo">
+                    <svg viewBox="0 0 100 50" width="100" height="50">
+                        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#40E0D0">Natura</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="brand-card">
+                <div class="brand-logo">
+                    <svg viewBox="0 0 100 50" width="100" height="50">
+                        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#FF69B4">Avon</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="brand-card">
+                <div class="brand-logo">
+                    <svg viewBox="0 0 100 50" width="100" height="50">
+                        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#000000">O Boticário</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="brand-card">
+                <div class="brand-logo">
+                    <svg viewBox="0 0 100 50" width="100" height="50">
+                        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#FF0000">Quem Disse Berenice</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Newsletter -->
+<section class="newsletter">
+    <div class="newsletter-content">
+        <h3>Assine nossa Newsletter</h3>
+        <p>Receba ofertas exclusivas e novidades em primeira mão</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Seu melhor e-mail">
+            <button type="submit">Assinar</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-column">
+            <h4>Pitada de Amor</h4>
+            <p>Sua loja online de acessórios, sapatos e cosméticos com uma pitada de amor em cada produto.</p>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+        </div>
+        <div class="footer-column">
+            <h4>Categorias</h4>
+            <ul class="footer-links">
+                <li><a href="#">Semijoias</a></li>
+                <li><a href="#">Sapatos</a></li>
+                <li><a href="#">Perfumes</a></li>
+                <li><a href="#">Maquiagem</a></li>
+                <li><a href="#">Cuidados Pessoais</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Informações</h4>
+            <ul class="footer-links">
+                <li><a href="#">Sobre Nós</a></li>
+                <li><a href="#">Política de Privacidade</a></li>
+                <li><a href="#">Termos e Condições</a></li>
+                <li><a href="#">Política de Trocas</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="footer-column footer-contact">
+            <h4>Contato</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Rua das Flores, 123 - São Paulo</p>
+            <p><i class="fas fa-phone"></i> (11) 99999-9999</p>
+            <p><i class="fas fa-envelope"></i> contato@pitadadeamor.com.br</p>
+            <p><i class="fas fa-clock"></i> Seg - Sex: 9h às 18h</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023 Pitada de Amor. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+<script>
+    // Mobile Menu Toggle
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const closeMenu = document.querySelector('.close-menu');
+    const navContent = document.querySelector('.nav-content');
+    const menuOverlay = document.querySelector('.menu-overlay');
+
+    mobileMenuToggle.addEventListener('click', () => {
+        navContent.classList.add('active');
+        menuOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+
+    closeMenu.addEventListener('click', () => {
+        navContent.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+
+    menuOverlay.addEventListener('click', () => {
+        navContent.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+
+    // Dropdown Menu for Mobile
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            const parent = toggle.parentElement;
+            parent.classList.toggle('active');
+        });
+    });
+
+    // Product Tags
+    const productTags = document.querySelectorAll('.product-tag');
+    productTags.forEach(tag => {
+        tag.addEventListener('click', () => {
+            productTags.forEach(t => t.classList.remove('active'));
+            tag.classList.add('active');
+            // Here you would typically filter products based on the selected tag
+        });
+    });
+
+    // Add to Cart Animation
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            this.innerHTML = '<i class="fas fa-check"></i> Adicionado';
+            this.style.backgroundColor = '#4CAF50';
+            
+            setTimeout(() => {
+                this.innerHTML = 'Adicionar ao Carrinho';
+                this.style.backgroundColor = '';
+            }, 2000);
+        });
+    });
+
+    // Heart Animation for Valentine's Day
+    function createHearts() {
+        const heartsContainer = document.querySelector('.hearts-decoration');
+        const numberOfHearts = 5;
+        
+        for (let i = 0; i < numberOfHearts; i++) {
+            const heart = document.createElement('svg');
+            heart.classList.add('heart');
+            heart.setAttribute('viewBox', '0 0 24 24');
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDuration = 10 + Math.random() * 15 + 's';
+            heart.style.animationDelay = Math.random() * 5 + 's';
+            heart.style.width = 20 + Math.random() * 30 + 'px';
+            heart.style.height = 20 + Math.random() * 30 + 'px';
+            
+            const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            path.setAttribute('fill', 'white');
+            path.setAttribute('d', 'M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z');
+            
+            heart.appendChild(path);
+            heartsContainer.appendChild(heart);
+        }
+    }
+    
+    createHearts();
+</script>
